@@ -1,0 +1,57 @@
+
+<ngb-tabset #t="ngbTabset">
+    <ngb-tab id="tab-selectbyid1" title="Noticias">
+      <ng-template ngbTabContent>
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3" *ngFor="let noticia of noticias let i = index">
+              <div class="card" style="width: 18rem;" *ngIf="i < 8">
+                <img src="{{ noticia.urlImagen }}" class="card-img-top" alt="..." width="150px" height="100px">
+                <div class="card-body">
+                  <h5 class="card-title">{{noticia.titulo}}</h5>
+                  <p class="card-text">{{noticia.texto}}</p>
+                  <p>fecha: {{noticia.fechaPublicacion}}</p>
+                  <a class="btn btn-primary" (click)="verNoticia(noticiaFull, i)">Leer</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab id="tab-selectbyid2">
+      <ng-template ngbTabTitle>Galería</ng-template>
+      <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+        <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+        craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+        cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
+        yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean
+        shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero
+        sint qui sapiente accusamus tattooed echo park.</p>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+
+
+
+
+
+  <ng-template #noticiaFull let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{ tituloNoticia }}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>{{ textoNoticia }}</label>
+            <label>{{ fechaNoticia }}</label>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+      </div>
+    </ng-template>
+
