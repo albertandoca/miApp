@@ -5,12 +5,12 @@
         <div class="row">
           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3" *ngFor="let noticia of noticias let i = index">
               <div class="card" style="width: 18rem;" *ngIf="i < 8">
-                <img src="{{ noticia.urlImagen }}" class="card-img-top" alt="..." width="150px" height="100px">
+                <img src="{{ noticia.urlImagen }}" class="card-img-top" alt="..." width="60%;" height="60%;">
                 <div class="card-body">
                   <h5 class="card-title">{{noticia.titulo}}</h5>
                   <p class="card-text">{{noticia.texto}}</p>
                   <p>fecha: {{noticia.fechaPublicacion}}</p>
-                  <a class="btn btn-primary" (click)="verNoticia(noticiaFull, i)">Leer</a>
+                  <a class="btn btn-primary" (click)="verNoticia(noticiaFull, i)">Leer más</a>
                 </div>
             </div>
           </div>
@@ -46,7 +46,6 @@
           <div class="form-group">
             <label>{{ textoNoticia }}</label>
             <label>{{ fechaNoticia }}</label>
-
           </div>
         </form>
       </div>

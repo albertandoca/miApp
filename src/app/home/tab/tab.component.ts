@@ -47,6 +47,15 @@ export class TabComponent implements OnInit {
         texto: 'ldksjfñlksjdf ñlsjd fñaj sldj fñlhdf asdjh alksdjhf aljf lajkhf alkjfh lah aljd',
         urlImagen: '../../../assets/img/personas.png',
         fechaPublicacion: new Date()},
+        { titulo: 'Mi primera nocticia',
+        texto: 'ldksjfñlksjdf ñlsjd fñaj sldj fñlhdf asdjh alksdjhf aljf lajkhf alkjfh lah aljd',
+        urlImagen: '../../../assets/img/personas.png',
+        fechaPublicacion: new Date()},
+        { titulo: 'Mi primera nocticia',
+        texto: 'ldksjfñlksjdf ñlsjd fñaj sldj fñlhdf asdjh alksdjhf aljf lajkhf alkjfh lah aljd',
+        urlImagen: '../../../assets/img/personas.png',
+        fechaPublicacion: new Date()},
+
     ];
   }
 

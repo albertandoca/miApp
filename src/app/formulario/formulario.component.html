@@ -1,3 +1,25 @@
-<p>
-  formulario works!
-</p>
+
+<div class="formulario">
+    <form [formGroup]="form555">
+        <label for="email">E-mail</label>
+        <input name="email"
+               formControlName="mail"
+               type="email" />
+        <label for="name">Name</label>
+        <input name="name"
+               formControlName="nombres"
+               type="text" />
+        <label for="name">Apellidos</label>
+        <input name="name"
+               formControlName="apellidos"
+               type="text" />
+
+        <label for="password">Password</label>
+        <input name="password"
+               formControlName="password"
+               type="password" />
+
+               <button (click)="enviar()">Enviar</button>
+      </form>
+</div>
+
